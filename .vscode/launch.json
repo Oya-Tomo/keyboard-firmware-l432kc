@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "request": "launch",
+      "name": "OpenOCD-Debug",
+      "executable": "${workspaceRoot}/target/thumbv7em-none-eabihf/debug/wavier-keys",
+      "configFiles": ["interface/stlink.cfg", "board/st_nucleo_l4.cfg"],
+      "cwd": "${workspaceRoot}",
+      "gdbPath": "arm-none-eabi-gdb",
+      "preLaunchCommands": ["monitor arm semihosting enable"]
+    }
+  ]
+}
